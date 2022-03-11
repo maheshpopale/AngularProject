@@ -1,0 +1,38 @@
+#grad {
+    background-image: linear-gradient(#ee5f73, #fb56c1,#f26a10);
+    border-radius:10px;
+    margin:5px;
+  }
+
+#alist:hover{
+    display: block;
+    background-color:white;
+    color:black;
+}
+#alist{
+    color:white;
+}
+.dropdown-content a{
+    color:black;
+}
+.dropdown-content a:hover{
+background-color:black;
+color:white;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color:black;
+    background-color:white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    width:160px;
+  }
+  .nav-item:hover,dropdown-content:hover{
+      border-bottom: 5px solid #FF6347;
+  }

@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row justify-content-center mt-5 ">
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="productName" [(ngModel)]="productName" (ngModelChange)="search()"
+            placeholder="Search By Product Name">
+        </div>
+    </div>
+    <div class="row mt-3 bg-light">
+        <div class="col-md-3 mt-3 mb-3" *ngFor="let product of products | paginate :{id:'listing',
+        itemsPerPage:8,
+        currentPage:page,
+        totalItems:totalRecords
+    } ">
+            <div class="card" id="card" style="height: 420px;">
+                <img src='{{product.image}}' alt="ProductImage" height="250" class="card-img-top">
+                <div class="card-body">
+                    <h3>{{product.productName}}</h3>
+                    <h4 class="text-body"> Price&nbsp;{{product.productPrice|currency :'INR'}}</h4>
+                   </div>
+                   <div>
+                    <button id="viewbtn" routerLink="/product/{{product.id}}" mat-raised-button color="primary" style="background-color: #fc2779;;" class="mb-3 mr-3" >View</button>
+                   </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <pagination-controls class="text-center" id="listing"  (pageChange)="page=$event"></pagination-controls>
+        </div>
+    </div>
+    
+</div>

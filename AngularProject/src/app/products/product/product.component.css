@@ -1,0 +1,10 @@
+.card{
+    margin:20px 0px;
+}
+#card{
+    border:4px outset whitesmoke;
+    overflow:hidden;
+}
+#matcard{
+    margin:20px 0px 20px 0px;
+}

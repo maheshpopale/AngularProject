@@ -1,0 +1,33 @@
+input.ng-touched.ng-invalid{
+    border:1px solid red;
+}
+/* #background{
+    background-color:black;
+} */
+span{
+    color:red;
+}
+#card{
+    border:4px outset whitesmoke;
+    overflow:hidden;
+}
+ #card-body{
+    background: white; opacity:0.8;
+    z-index: -1;
+} 
+.form-check
+{
+    float:left;
+}
+#admin,#user{
+    margin: 5px;;
+}
+#label{
+    
+    padding: 10px;
+}
+.box{
+    height:500px;
+    width: 300px;
+    border: 2 px solid red;
+}

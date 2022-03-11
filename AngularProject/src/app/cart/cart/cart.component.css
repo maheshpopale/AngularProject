@@ -1,0 +1,18 @@
+.card{
+    margin:25px;
+    padding:25px;
+}
+.center{
+    text-align:center;
+}
+.center img{
+    height:300px;
+    width:35%;
+}
+#btn1{
+    border-radius: 20px;
+   
+}
+mat-card{
+    margin:16px 0px 16px 0px;
+}

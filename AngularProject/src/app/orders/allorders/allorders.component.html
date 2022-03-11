@@ -1,0 +1,51 @@
+<div class="contanier-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <h1 class="text-center mt-3 text-primary">ALL ORDERS</h1>
+            <table class=" table-responsive table table-striped mt-5">
+                <thead>
+                    <tr>
+                    <th>Order ID</th>
+                    <th>Order Date</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Zip</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Size</th>
+                    <th>Status</th>
+                    <th colspan="2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of orders">
+                        <td>{{order.orderId}}</td>
+                        <td>{{order.orderDate}}</td>
+                        <td>{{order.firstName}}  {{order.lastName}}</td>
+                        <td>{{order.email}}</td>
+                        <td>{{order.address}}</td>
+                        <td>{{order.city}}</td>
+                        <td>{{order.zip}}</td>
+                        <td>{{order.productName}}</td>
+                        <td>{{order.productQuantity}}</td>
+                        <td>{{order.productPrice}}</td>
+                        <td>{{order.productSize}}</td>
+                        <td>{{order.orderStatus}}</td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" (click)="acceptOrder(order.orderId)">Accept</button>
+                                <button class="btn btn-danger" (click)="deleteOrder(order.orderId)">Delete</button>
+                            </div>
+                        </td>
+
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>

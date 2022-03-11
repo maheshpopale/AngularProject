@@ -1,0 +1,16 @@
+input.ng-touched.ng-invalid{
+    border:1px solid red;
+}
+span{
+    color:red;
+}
+#row{
+    background:rgb(251, 237, 242);
+}
+#card{
+    border:4px outset whitesmoke;
+    overflow:hidden;
+}
+/* #background{
+    background-color:black;
+} */

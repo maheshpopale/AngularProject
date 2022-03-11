@@ -1,0 +1,89 @@
+<div class="container mt-5 bg-light">
+  <div class="row justify-content-center">
+    <div class="col-md-6" id="background">
+    <div class="card-deck" id="card">
+      <div class="card mt-3 mb-3">
+        <h2 class="card-title text-center text-primary mt-3">SIGN UP</h2>
+        <div class="card-body">
+          <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <div class="form-group">
+                <label for="registerFirstname" class="form-label">First Name</label>
+                <input type="text"  name="Firstname" ngModel required #Firstname="ngModel"
+                class="form-control"
+                id="firstName"
+                placeholder="FirstName">
+            </div>
+            <div class="form-group">
+                <label for="registerLastname" class="form-label">Last Name</label>
+                <input type="text"  name="lastname" ngModel required #lastname="ngModel"
+                class="form-control"
+                id="lastName"
+                placeholder="lastName">
+            </div>
+            <div class="form-group">
+                <label for="registeruseriEmailid" class="form-label">Email address</label>
+                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"name="email" ngModel required #email="ngModel"
+                class="form-control"
+                id="emailAdd"
+                aria-describedby="emailHelp"
+                placeholder="Email ID"
+                >
+              </div>
+            <div class="form-group">
+                <label for="registeruserMobileNumber" class="form-label">Phone Number</label>
+                <input type="tel"  pattern=".{10}" name="mobile" maxlength="10" ngModel required #mobile="ngModel"
+                class="form-control"
+                id="phoneNo"
+                placeholder="Mobile Number"
+                >
+              </div>
+            <div class="form-group">
+                <label for="registeruserAddress" class="form-label">Address Line</label>
+                <input type="text"  name="Address" ngModel required #Address="ngModel"
+                class="form-control"
+                id="address"
+                placeholder="Your Address">
+              </div>
+              <div class="form-group">
+                <label for="city" class="form-label">City</label>
+                <input type="text"  name="city" ngModel required #city="ngModel"
+                class="form-control"
+                id="address"
+                placeholder="Your City">
+              </div>
+              <div class="form-group">
+                <label for="state" class="form-label">State</label>
+                <input type="text"  name="state" ngModel required #state="ngModel"
+                class="form-control"
+                id="address"
+                placeholder="Your State">
+              </div>
+              <div class="form-group">
+                <label for="postalcode" class="form-label">Postal Code</label>
+                <input type="text"  name="postalCode" ngModel required #postalCode="ngModel"
+                class="form-control"
+                placeholder="
+                PostalCode">
+            </div>
+              <div class="form-group" >
+          
+                <label for="password1" class="form-label">Password</label>
+                <input type="password"  name="password" ngModel required #password="ngModel"
+                class="form-control" id="password"
+                placeholder="Enter Password">
+              </div>
+          
+              <a routerLink="/login">Already registered? Click here to login !!</a><br>
+            <div class="pt-1 mb-4">
+          
+              <button type="submit"
+              class="btn btn-primary btn-block">Register</button>
+            </div>
+          </form>
+          <div class="alert alert-success" *ngIf="registered">YOU HAVE REGISTERED SUCCESSFULLY</div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

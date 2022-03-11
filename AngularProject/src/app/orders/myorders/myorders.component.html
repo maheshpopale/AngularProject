@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <h1 class="text-center mt-3 text-primary">MY ORDERS</h1>
+            <table class=" table-responsive table table-striped mt-5">
+                <thead>
+                    <tr>
+                    <th>Order ID</th>
+                    <th>Order Date</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Size</th>
+                    <th>Status</th>
+                    <th colspan="2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of myOrders">
+                        <td>{{order.orderId}}</td>
+                        <td>{{order.orderDate}}</td>
+                        <td>{{order.productName}}</td>
+                        <td>{{order.productQuantity}}</td>
+                        <td>{{order.productPrice}}</td>
+                        <td>{{order.productSize}}</td>
+                        <td>{{order.orderStatus}}</td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-danger">Cancel</button>
+                            </div>
+                        </td>
+
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>

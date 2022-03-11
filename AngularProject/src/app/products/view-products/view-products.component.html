@@ -1,0 +1,24 @@
+<div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+        <h2 class="text-primary text-center">PRODUCTS LIST</h2>
+       <table class="table table-responsive table-striped">
+           <tr>
+               <th>PRODUCT</th>
+               <th>IMAGE</th>
+               <th>QUANTITY</th>
+               <th>PRICE</th>
+               <th>DESCRIPTION</th>
+               <th colspan="2">Actions</th>
+           </tr>
+           <tr  *ngFor="let product of products">
+               <td>{{product.productName}}</td>
+               <td><img src='{{product.image}}' height="100" width="100" class="img-fluid img-thumbnail" alt="ProductImage"></td>
+               <td>{{product.productQuantity}}</td>
+               <td>{{product.productPrice}}</td>
+               <td>{{product.productDescription}}</td>
+               <td><a routerLink="/updateProduct/{{product.id}}" class="btn btn-primary">Edit</a></td>
+               <td><a routerLink="/deleteProduct/{{product.id}}" class="btn btn-danger">Delete</a></td>
+           </tr>
+       </table>
+    </div>
+    </div>
